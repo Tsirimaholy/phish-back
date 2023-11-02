@@ -17,7 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from phisher.views import login
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('phisher.urls')),
+    path('login', login, name="login"),
 ]

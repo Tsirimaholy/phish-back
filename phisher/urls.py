@@ -1,7 +1,7 @@
 from django.urls import path
 
-from  .views import users
+from .views import secret
 
 urlpatterns = [
-    path('super-secret', users, name="users"),
+    path('super-secret', secret, name="secret"),
 ]
