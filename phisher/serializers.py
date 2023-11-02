@@ -6,6 +6,6 @@ from .models import UserInfo
 class UserInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserInfo
-        fields = ['id', 'username', 'password', 'login_date']
-    login_date = serializers.DateTimeField(read_only=True)
+        fields = ['id', 'username', 'password', 'log_date']
+    log_date = serializers.DateTimeField(read_only=True, source='loging_date')
 
